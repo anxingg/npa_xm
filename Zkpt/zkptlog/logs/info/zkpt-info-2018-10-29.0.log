@@ -1,0 +1,945 @@
+2018-10-29 18:37:49.145 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 1964 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:37:49.214 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:37:51.341 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:37:51.356 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:37:51.356 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:37:51.372 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:37:51.472 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:37:51.829 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:37:53.046 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:37:53.100 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:37:53.133 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:37:53.134 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:37:53.136 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:37:53.138 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:37:53.138 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:37:53.138 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:37:53.139 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7fa6a30
+2018-10-29 18:37:53.395 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:37:53.395 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:37:53.411 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:37:53.442 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.915 seconds (JVM running for 5.747)
+2018-10-29 18:37:53.504 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:38:07.270 INFO  --- [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:38:07.381 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:38:07.382 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:64154
+2018-10-29 18:38:07.382 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:38:07.383 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:64154
+2018-10-29 18:38:07.390 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 37 38 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 33 38 30 37 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:38:17.415 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:38:27.417 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:38:38.496 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 9304 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:38:38.499 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:38:40.315 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:38:40.323 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:38:40.324 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:38:40.335 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:38:40.469 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:38:40.774 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:38:41.810 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:38:41.854 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:38:41.867 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:38:41.868 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:38:41.869 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:38:41.870 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:38:41.870 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:38:41.870 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:38:41.870 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2ccbfa94
+2018-10-29 18:38:42.057 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:38:42.066 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:38:42.075 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:38:42.094 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.147 seconds (JVM running for 4.599)
+2018-10-29 18:38:42.130 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:38:53.062 INFO  --- [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:38:53.131 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:38:53.132 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:64589
+2018-10-29 18:38:53.133 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:38:53.133 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:64589
+2018-10-29 18:38:53.137 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 37 38 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 33 38 35 33 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:40:03.353 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 13856 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:40:03.362 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:40:05.392 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:40:05.399 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:40:05.400 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:40:05.411 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:40:05.528 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:40:05.996 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:40:07.306 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:40:07.363 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:40:07.380 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:40:07.386 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:40:07.388 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:40:07.389 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:40:07.390 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:40:07.390 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:40:07.391 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5b52902c
+2018-10-29 18:40:07.661 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:40:07.674 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:40:07.685 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:40:07.777 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 5.151 seconds (JVM running for 5.819)
+2018-10-29 18:40:07.830 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:40:12.204 INFO  --- [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:40:12.346 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:40:12.348 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:65297
+2018-10-29 18:40:12.351 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:40:12.352 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:65297
+2018-10-29 18:40:12.353 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=113 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 30 31 32 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 30 30 30 30 30 30 31 30 2C 30 30 30 30 30 30 31 31 7C 0D 0A...]
+2018-10-29 18:40:12.356 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:65297数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:65297...20181029184012)
+(String)数据格式:010008      016397851       0061|821|100100170012|10.2|10.2|20181029184012|00100080|000000|1|0
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184012|00100080|000000|1|0
+----------end 银行协议数据包----------
+
+2018-10-29 18:41:24.196 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 14096 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:41:24.212 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:41:26.370 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:41:26.378 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:41:26.379 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:41:26.390 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:41:26.511 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:41:26.963 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:41:28.353 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:41:28.406 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:41:28.424 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:41:28.425 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:41:28.426 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:41:28.427 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:41:28.427 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:41:28.428 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:41:28.428 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7e63af1b
+2018-10-29 18:41:28.693 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:41:28.703 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:41:28.713 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:41:28.740 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 5.143 seconds (JVM running for 5.903)
+2018-10-29 18:41:28.810 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:41:31.860 INFO  --- [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:41:31.941 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:41:31.942 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:49627
+2018-10-29 18:41:31.943 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:41:31.943 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:49627
+2018-10-29 18:41:31.948 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 31 33 31 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:41:31.952 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:49627数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:49627...20181029184131)
+(String)数据格式:010008      016397851       0061|821|100100170012|10.2|10.2|20181029184131|00100080|000000|1||
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184131|00100080|000000|1||
+----------end 银行协议数据包----------
+
+2018-10-29 18:42:47.483 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 13472 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:42:47.498 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:42:49.513 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:42:49.529 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:42:49.529 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:42:49.529 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:42:49.675 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:42:50.112 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:42:51.388 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:42:51.447 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:42:51.466 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:42:51.466 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:42:51.469 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:42:51.470 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:42:51.471 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:42:51.474 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:42:51.475 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7d2c7802
+2018-10-29 18:42:51.781 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:42:51.796 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:42:51.796 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:42:51.827 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 5.033 seconds (JVM running for 5.783)
+2018-10-29 18:42:51.905 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:42:56.738 INFO  --- [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:42:56.837 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:42:56.838 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:50377
+2018-10-29 18:42:56.838 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:42:56.839 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:50377
+2018-10-29 18:42:56.859 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=98 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 33 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 32 35 36 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 7C 7C 0D 0A...]
+2018-10-29 18:42:56.863 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:50377数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:50377...20181029184256)
+(String)数据格式:010008      016397851       0063|821|100100170012|10.2|10.2|20181029184256|00100080|000000|1||||
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0063
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184256|00100080|000000|1||||
+----------end 银行协议数据包----------
+
+2018-10-29 18:43:22.820 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 13620 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:43:22.820 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:43:24.882 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:43:24.890 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:43:24.891 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:43:24.904 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_131\jre\bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:43:25.022 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:43:25.518 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:43:26.747 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:43:26.797 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:43:26.827 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:43:26.827 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:43:26.830 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:43:26.831 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:43:26.831 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:43:26.832 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:43:26.835 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2b71074f
+2018-10-29 18:43:27.066 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:43:27.066 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:43:27.082 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:43:27.114 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.96 seconds (JVM running for 5.668)
+2018-10-29 18:43:27.178 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:43:33.426 INFO  --- [http-nio-8081-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:43:33.504 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:43:33.506 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:50730
+2018-10-29 18:43:33.506 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:43:33.507 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:50730
+2018-10-29 18:43:33.514 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=99 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 34 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 33 33 33 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 7C 31 7C 0D 0A...]
+2018-10-29 18:43:33.518 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:50730数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:50730...20181029184333)
+(String)数据格式:010008      016397851       0064|821|100100170012|10.2|10.2|20181029184333|00100080|000000|1|||1|
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0064
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184333|00100080|000000|1|||1|
+----------end 银行协议数据包----------
+
+2018-10-29 18:46:12.181 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 13140 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:46:12.181 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:46:14.034 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:46:14.042 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:46:14.043 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:46:14.055 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:46:14.172 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:46:14.529 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:46:15.538 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:46:15.583 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:46:15.598 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:46:15.599 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:46:15.600 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:46:15.601 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:46:15.601 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:46:15.601 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:46:15.602 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6f0adf10
+2018-10-29 18:46:15.810 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:46:15.825 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:46:15.841 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:46:15.863 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.206 seconds (JVM running for 4.653)
+2018-10-29 18:46:15.919 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:46:21.725 INFO  --- [http-nio-8081-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:46:21.834 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:46:21.835 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:52216
+2018-10-29 18:46:21.836 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:46:21.836 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:52216
+2018-10-29 18:46:21.848 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 36 32 31 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:46:21.851 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:52216数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:52216...20181029184621)
+(String)数据格式:010008      016397851       0061|821|100100170012|10.2|10.2|20181029184621|00100080|000000|1||
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184621|00100080|000000|1||
+----------end 银行协议数据包----------
+
+2018-10-29 18:46:31.884 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:49:17.254 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 11688 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:49:17.254 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:49:19.030 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:49:19.038 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:49:19.039 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:49:19.051 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:49:19.170 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:49:19.472 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:49:20.476 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:49:20.520 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:49:20.533 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:49:20.533 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:49:20.534 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:49:20.535 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:49:20.536 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:49:20.536 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:49:20.536 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@67423702
+2018-10-29 18:49:20.731 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:49:20.739 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:49:20.748 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:49:20.768 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.138 seconds (JVM running for 4.576)
+2018-10-29 18:49:20.822 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:49:24.572 INFO  --- [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:53821
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:53821
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 34 39 32 34 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:49:24.639 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:53821数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:53821...20181029184924)
+(String)数据格式:010008      016397851       0061|821|100100170012|10.2|10.2|20181029184924|00100080|000000|1||
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029184924|00100080|000000|1||
+----------end 银行协议数据包----------
+
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:37  - 中间件服务器创建天然气客户端，IP和端口为: /192.168.1.124:10002
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:44  - 中间件服务器创建天然气客户端会话打开，IP和端口为: /192.168.1.124:10002
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - SENT: ----------start 天然气协议数据包----------
+(String)数据格式:01020080000000001000639785120181029184924000000064010.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||\$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029184924
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00064
+	8) 是否有下一包:0
+交易包内容:10.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||\$
+----------end 天然气协议数据包----------
+
+2018-10-29 18:49:24.670 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:65  - 中间件服务器创建天然气客户端发送消息:
+----------start 天然气协议数据包----------
+(String)数据格式:01020080000000001000639785120181029184924000000064010.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||\$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029184924
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00064
+	8) 是否有下一包:0
+交易包内容:10.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||\$
+----------end 天然气协议数据包----------
+
+2018-10-29 18:49:34.671 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:49:34.673 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - both idle
+2018-10-29 18:49:34.686 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:51:36.706 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 13360 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 18:51:36.709 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 18:51:38.472 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:51:38.480 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 18:51:38.480 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 18:51:38.491 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 18:51:38.659 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 18:51:38.973 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 18:51:39.969 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 18:51:40.015 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 18:51:40.052 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 18:51:40.053 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 18:51:40.061 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 18:51:40.062 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 18:51:40.063 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 18:51:40.063 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 18:51:40.064 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@72f35551
+2018-10-29 18:51:40.327 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 18:51:40.335 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 18:51:40.346 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 18:51:40.384 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.352 seconds (JVM running for 4.79)
+2018-10-29 18:51:40.430 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 18:51:46.477 INFO  --- [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 18:51:46.537 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:51:46.538 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:55055
+2018-10-29 18:51:46.538 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:51:46.538 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:55055
+2018-10-29 18:51:46.542 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=96 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 30 2E 32 7C 31 30 2E 32 7C 32 30 31 38 31 30 32 39 31 38 35 31 34 36 7C 30 30 31 30 30 30 38 30 7C 30 30 30 30 30 30 7C 31 7C 7C 0D 0A...]
+2018-10-29 18:51:46.544 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:55055数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:55055...20181029185146)
+(String)数据格式:010008      016397851       0061|821|100100170012|10.2|10.2|20181029185146|00100080|000000|1||
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|10.2|10.2|20181029185146|00100080|000000|1||
+----------end 银行协议数据包----------
+
+2018-10-29 18:51:46.567 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 18:51:46.568 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:37  - 中间件服务器创建天然气客户端，IP和端口为: /192.168.1.124:10002
+2018-10-29 18:51:46.569 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 18:51:46.569 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:44  - 中间件服务器创建天然气客户端会话打开，IP和端口为: /192.168.1.124:10002
+2018-10-29 18:51:46.570 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - SENT: ----------start 天然气协议数据包----------
+(String)数据格式:01020080000000001000639785120181029185146000000063010.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029185146
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00063
+	8) 是否有下一包:0
+交易包内容:10.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||$
+----------end 天然气协议数据包----------
+
+2018-10-29 18:51:46.570 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:65  - 中间件服务器创建天然气客户端发送消息:
+----------start 天然气协议数据包----------
+(String)数据格式:01020080000000001000639785120181029185146000000063010.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029185146
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00063
+	8) 是否有下一包:0
+交易包内容:10.2|10.2|0.0|100100170012|201809|10.2|10.2|0.0|20181029|1|2||$
+----------end 天然气协议数据包----------
+
+2018-10-29 18:51:56.572 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:51:56.573 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - both idle
+2018-10-29 18:51:56.576 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:52:01.574 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:52:01.574 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - reader idle
+2018-10-29 18:52:01.574 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:52:01.575 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - writer idle
+2018-10-29 18:52:06.576 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 18:52:06.577 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - both idle
+2018-10-29 18:52:06.578 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 19:10:33.619 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:50  - Starting ZkptApplication on zhaoqi-PC with PID 9592 (C:\Users\zhaoqi\eclipse-workspace\Zkpt\target\classes started by zhaoqi in C:\Users\zhaoqi\eclipse-workspace\Zkpt)
+2018-10-29 19:10:33.623 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:671 - No active profile set, falling back to default profiles: default
+2018-10-29 19:10:35.348 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-10-29 19:10:35.355 INFO  --- [restartedMain] org.apache.catalina.core.StandardService
+				Line:173 - Starting service [Tomcat]
+2018-10-29 19:10:35.356 INFO  --- [restartedMain] org.apache.catalina.core.StandardEngine
+				Line:173 - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-10-29 19:10:35.366 INFO  --- [restartedMain] org.apache.catalina.core.AprLifecycleListener
+				Line:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\RabbitMQServer\rabbitmq_server-3.7.8\sbin;C:\Program Files\erl10.1\bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit;C:\Program Files\IDM Computer Solutions\UltraCompare;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\eclipse-jee-oxygen;;.]
+2018-10-29 19:10:35.472 INFO  --- [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring embedded WebApplicationContext
+2018-10-29 19:10:35.754 INFO  --- [restartedMain] com.zkpt.DruidConfiguration
+				Line:50  - 初始化数据源!
+2018-10-29 19:10:36.804 INFO  --- [restartedMain] com.alibaba.druid.pool.DruidDataSource
+				Line:930 - {dataSource-1} inited
+2018-10-29 19:10:36.852 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1208 - Using default implementation for ThreadExecutor
+2018-10-29 19:10:36.868 INFO  --- [restartedMain] org.quartz.core.SchedulerSignalerImpl
+				Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-10-29 19:10:36.869 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:229 - Quartz Scheduler v.2.3.0 created.
+2018-10-29 19:10:36.870 INFO  --- [restartedMain] org.quartz.simpl.RAMJobStore
+				Line:155 - RAMJobStore initialized.
+2018-10-29 19:10:36.871 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-10-29 19:10:36.872 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2018-10-29 19:10:36.872 INFO  --- [restartedMain] org.quartz.impl.StdSchedulerFactory
+				Line:1366 - Quartz scheduler version: 2.3.0
+2018-10-29 19:10:36.872 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6b0ec76a
+2018-10-29 19:10:37.104 INFO  --- [restartedMain] org.quartz.core.QuartzScheduler
+				Line:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2018-10-29 19:10:37.112 INFO  --- [restartedMain] org.apache.coyote.http11.Http11NioProtocol
+				Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+2018-10-29 19:10:37.123 INFO  --- [restartedMain] org.apache.tomcat.util.net.NioSelectorPool
+				Line:173 - Using a shared selector for servlet write/read
+2018-10-29 19:10:37.144 INFO  --- [restartedMain] com.zkpt.ZkptApplication
+				Line:59  - Started ZkptApplication in 4.105 seconds (JVM running for 4.547)
+2018-10-29 19:10:37.194 INFO  --- [restartedMain] com.zkpt.middleware.service.impl.MwFactoryServiceImpl
+				Line:96  - server : 192.168.1.124:60001开始监听!
+2018-10-29 19:10:45.858 INFO  --- [http-nio-8081-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/zkpt]
+				Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-10-29 19:10:59.908 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 19:10:59.908 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:47  - 中间件服务会话创建，连接过来的银行客户端IP和端口为:192.168.1.124:64927
+2018-10-29 19:10:59.909 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 19:10:59.909 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:72  - 中间件服务器会话打开，连接过来的银行客户端IP和端口为:192.168.1.124:64927
+2018-10-29 19:10:59.915 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - RECEIVED: HeapBuffer[pos=0 lim=94 cap=2048: 30 31 30 30 30 38 20 20 20 20 20 20 30 31 36 33 39 37 38 35 31 20 20 20 20 20 20 20 30 30 36 31 7C 38 32 31 7C 31 30 30 31 30 30 31 37 30 30 31 32 7C 31 2E 32 7C 31 2E 32 7C 32 30 31 38 31 30 32 39 31 39 31 30 35 39 7C 30 30 31 30 30 30 38 30 7C 32 30 31 38 30 39 7C 31 7C 7C 0D 0A...]
+2018-10-29 19:10:59.918 INFO  --- [NioProcessor-2] com.zkpt.middleware.handler.BankServerHandler
+				Line:82  - 中间件服务器收到/192.168.1.124:64927数据包:
+----------start 银行协议数据包----------
+客户端(192.168.1.124:64927...20181029191059)
+(String)数据格式:010008      016397851       0061|821|100100170012|1.2|1.2|20181029191059|00100080|201809|1||
+
+请求命令:PAYMENT(821|交易缴费)
+mina会话Key:1
+交易包头内容:
+	1) 包头:01
+	2) 缴费点代码:0008
+	3) 缴费点密码:     
+	4) 备用: 
+	5) 交易方式:01
+	6) 交易流水号:6397851       
+	7) 包体长度字节数:0061
+	8) 包头结束符:|
+交易包内容:821|100100170012|1.2|1.2|20181029191059|00100080|201809|1||
+
+----------end 银行协议数据包----------
+
+2018-10-29 19:10:59.945 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - CREATED
+2018-10-29 19:10:59.946 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:37  - 中间件服务器创建天然气客户端，IP和端口为: /192.168.1.124:10002
+2018-10-29 19:10:59.946 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - OPENED
+2018-10-29 19:10:59.946 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:44  - 中间件服务器创建天然气客户端会话打开，IP和端口为: /192.168.1.124:10002
+2018-10-29 19:10:59.949 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:157 - SENT: ----------start 天然气协议数据包----------
+(String)数据格式:0102008000000000100063978512018102919105900000005901.2|1.2|0.0|100100170012|201809|1.2|1.2|0.0|20181029|1|2||$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029191059
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00059
+	8) 是否有下一包:0
+交易包内容:1.2|1.2|0.0|100100170012|201809|1.2|1.2|0.0|20181029|1|2||$
+----------end 天然气协议数据包----------
+
+2018-10-29 19:10:59.950 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:65  - 中间件服务器创建天然气客户端发送消息:
+----------start 天然气协议数据包----------
+(String)数据格式:0102008000000000100063978512018102919105900000005901.2|1.2|0.0|100100170012|201809|1.2|1.2|0.0|20181029|1|2||$
+请求命令:QFJN_COMM(0102|气费缴纳（销账）)
+交易包头内容:
+	1) 请求标识，命令字:0102
+	2) 银行编号:008
+	3) 银行设备编号:0000000001
+	4) 银行业务流水号:0006397851
+	5) 请求方或者响应方本地时间戳:20181029191059
+	6) 响应字响应方回馈:0000
+	7) 包体长度字节数:00059
+	8) 是否有下一包:0
+交易包内容:1.2|1.2|0.0|100100170012|201809|1.2|1.2|0.0|20181029|1|2||$
+----------end 天然气协议数据包----------
+
+2018-10-29 19:11:09.960 INFO  --- [NioProcessor-2] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 19:11:09.960 INFO  --- [NioProcessor-14] org.apache.mina.filter.logging.LoggingFilter
+				Line:186 - IDLE
+2018-10-29 19:11:09.962 INFO  --- [NioProcessor-14] com.zkpt.middleware.handler.GasClientHandler
+				Line:80  - -客户端与服务端连接[空闲] - both idle

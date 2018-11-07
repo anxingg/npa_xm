@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../plug-in/jquery/jquery-1.8.3.min.js"></script>
+<link type="text/css" href="../style/css/style.css" rel="stylesheet" />
+<link rel="shortcut icon" href="../style/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<div class="wrap" id="wrap811">
+		<form>
+			<div class="title">
+				<a href="javascript:void(0)">1)查询欠费明细811</a>
+			</div>
+			<table>
+				<tr>
+					<td>银行编号:</td>
+					<td><input type="text" class="longtxt" name="bankNo" value="0008" /></td>
+					<td rowspan="3"><input type="button" name="r811" id="r811" value="发送" /> <input type="button" name="c811" id="c811" value="清除" /></td>
+				</tr>
+				<tr>
+					<td>用户号:</td>
+					<td><input type="text" class="longtxt" name="user" value="100100170012" /></td>
+				</tr>
+				<tr>
+					<td>查询月份:</td>
+					<td><input type="text" class="longtxt" name="month" value="000000" /></td>
+				</tr>
+			</table>
+			<div class="breq">
+				<h3>(1)银行->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="bres">
+				<h3>(2)中间件->天然气</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="greq">
+				<h3>(3)天然气->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="gres">
+				<h3>(4)中间件->银行</h3>
+				<div class="cont"></div>
+			</div>
+		</form>
+	</div>
+
+	<div class="wrap" id="wrap821">
+		<form>
+			<div class="title">
+				2)<a href="javascript:void(0)">交易缴费821</a>
+			</div>
+			<table>
+				<tr>
+					<td>银行编号:</td>
+					<td><input type="text" class="longtxt" name="bankNo" value="0008" /></td>
+					<td rowspan="4"><input type="button" name="r821" id="r821" value="发送" /> <input type="button" name="c821" id="c821" value="清除" /></td>
+				</tr>
+				<tr>
+					<td>用户号:</td>
+					<td><input type="text" class="longtxt" name="user" value="100100170012" /></td>
+				</tr>
+				<tr>
+					<td>缴费金额:</td>
+					<td><input type="text" class="longtxt" name="money" value="0.1" /></td>
+				</tr>
+				<tr>
+					<td>缴费月份:</td>
+					<td><input type="text" class="longtxt" name="month" value="201809" /></td>
+				</tr>
+			</table>
+			<div class="breq">
+				<h3>(1)银行->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="bres">
+				<h3>(2)中间件->天然气</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="greq">
+				<h3>(3)天然气->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="gres">
+				<h3>(4)中间件->银行</h3>
+				<div class="cont"></div>
+			</div>
+		</form>
+	</div>
+
+	<div class="wrap" id="wrap850">
+		<form>
+			<div class="title">
+				3)<a href="javascript:void(0)">用户冲帐850</a>
+			</div>
+			<table>
+				<tr>
+					<td>银行编号:</td>
+					<td><input type="text" class="longtxt" name="bankNo" value="0008" /></td>
+					<td rowspan="3"><input type="button" name="r850" id="r850" value="发送" /> <input type="button" name="c850" id="c850" value="清除" /></td>
+				</tr>
+				<tr>
+					<td>用户号:</td>
+					<td><input type="text" class="longtxt" name="user" value="100100170012" /></td>
+				</tr>
+				<tr>
+					<td>银行流水号:</td>
+					<td><input type="text" class="longtxt" name="serNo" value="" /></td>
+				</tr>
+			</table>
+			<div class="breq">
+				<h3>(1)银行->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="bres">
+				<h3>(2)中间件->天然气</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="greq">
+				<h3>(3)天然气->中间件</h3>
+				<div class="cont"></div>
+			</div>
+			<div class="gres">
+				<h3>(4)中间件->银行</h3>
+				<div class="cont"></div>
+			</div>
+		</form>
+	</div>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#r811').on('click', r811);
+        $('#r821').on('click', r821);
+        $('#r850').on('click', r850);
+    });
+
+    function r811() {
+        var url = 'queryArrears';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            data: {
+                bankNo: $('#wrap811 input[name="bankNo"]').val(),
+                user: $('#wrap811 input[name="user"]').val(),
+                month: $('#wrap811 input[name="month"]').val()},
+            dataType: "json",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                console.info(data);
+            }});
+    }
+
+    function r821() {
+        var url = 'payment';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            data: {
+                bankNo: $('#wrap821 input[name="bankNo"]').val(),
+                user: $('#wrap821 input[name="user"]').val(),
+                money: $('#wrap821 input[name="money"]').val(),
+                month: $('#wrap821 input[name="month"]').val()},
+            dataType: "json",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                console.info(data);
+            }});
+    }
+    
+    function r850() {
+        var url = 'userCharge';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            data: {
+                bankNo: $('#wrap850 input[name="bankNo"]').val(),
+                user: $('#wrap850 input[name="user"]').val(),
+                serNo: $('#wrap850 input[name="serNo"]').val()},
+            dataType: "json",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                console.info(data);
+            }});
+    }
+    
+</script>
+</html>

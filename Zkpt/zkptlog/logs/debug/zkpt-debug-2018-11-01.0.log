@@ -1,0 +1,24 @@
+2018-11-01 10:14:18.702 DEBUG --- [http-nio-8081-exec-2] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==>  Preparing: insert into mid_gas_user (ID, USER_NAME, USER_NO, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, DELFLAG, DEL_DATE ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-11-01 10:14:18.890 DEBUG --- [http-nio-8081-exec-2] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==> Parameters: null, 赵琦(String), 0001(String), system(String), 2018-11-01 10:14:18.656(Timestamp), null, null, null, null
+2018-11-01 10:14:18.895 DEBUG --- [http-nio-8081-exec-2] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - <==    Updates: 1
+2018-11-01 13:12:57.441 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==>  Preparing: insert into mid_gas_user (ID, USER_NAME, USER_NO, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, DELFLAG, DEL_DATE ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-11-01 13:12:57.626 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==> Parameters: null, 赵琦(String), 0001(String), system(String), 2018-11-01 13:12:57.394(Timestamp), null, null, null, null
+2018-11-01 13:12:57.632 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - <==    Updates: 1
+2018-11-01 14:14:37.979 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==>  Preparing: insert into mid_gas_user (ID, USER_NAME, USER_NO, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, DELFLAG, DEL_DATE ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-11-01 14:14:38.164 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==> Parameters: null, 赵琦(String), 0001(String), system(String), 2018-11-01 14:14:37.939(Timestamp), null, null, null, null
+2018-11-01 14:14:38.174 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - <==    Updates: 1
+2018-11-01 19:56:07.284 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==>  Preparing: insert into mid_gas_user (ID, USER_NAME, USER_NO, CREATE_BY, CREATE_DATE, UPDATE_BY, UPDATE_DATE, DELFLAG, DEL_DATE ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-11-01 19:56:07.515 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - ==> Parameters: null, 赵琦(String), 0001(String), system(String), 2018-11-01 19:56:07.228(Timestamp), null, null, null, null
+2018-11-01 19:56:07.523 DEBUG --- [http-nio-8081-exec-1] com.zkpt.data.dao.GasUserMapper.insert
+				Line:159 - <==    Updates: 1
