@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="draw.js"></script>
+<title>提供市场的所有交易所信息</title>
+<style type="text/css">
+* {
+	margin: auto;
+	padding: auto;
+}
+
+body {
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#A {
+	width: 60em;
+	min-height: 20em;
+}
+
+h1 {
+	width: 60em;
+	height: 2em;
+	background-color: #191d23;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 2em;
+	text-align: center;
+	margin: .5em auto 0 auto;
+	color: #acb5c2;
+}
+
+h2 {
+	width: 90em;
+	min-height: 2em;
+	font-size: .625em;
+	text-align: center;
+	margin: .5em auto 1em auto;
+	color: #191d23;
+	font-weight: 200;
+	color: #191d23;
+	display: block;
+}
+
+h2 a {
+	margin: 3px;
+}
+
+h3 {
+	width: 90em;
+	min-height: 2em;
+	font-size: .625em;
+	text-align: center;
+	margin: .5em auto 1em auto;
+	color: #191d23;
+	font-weight: 200;
+	color: #191d23;
+	display: block;
+}
+
+#A ul {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#A ul li {
+	list-style: none outside none;
+}
+
+#A ul>li {
+	width: 60em;
+	height: 2.5em;
+	padding: .5em 0;
+	border-top: 1px solid #aa99ff;
+}
+
+#A ul>li:last-child {
+	border-bottom: 1px solid #aa99ff;
+}
+
+#A ul>li .logo {
+	margin-right: 1em;
+}
+
+#A ul>li img {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+#A ul>li span {
+	line-height: 120%;
+	letter-spacing: .02em;
+	display: block;
+	float: left;
+	padding: 0.2em;
+}
+
+#A ul>li .pairsName {
+	color: #28aadc;
+	font-weight: 600;
+	width: 7.5em;
+}
+
+#A ul>li .market {
+	width: 8em;
+	font-size: 0.75em;
+}
+
+#A ul>li .base, #A ul>li .quot {
+	width: 3em;
+	font-size: .625em;
+}
+
+#A ul>li .price {	
+	width: 12em;
+	font-size: .625em;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<h1>提供指定的兑换货币交易所的信息</h1>
+	<h2>交易所列表</h2>
+	<h3>24h总交易量（BTC）</h3>
+
+	<div id="A">
+		<h4>交易所名称</h4>
+		<ul id="template">
+			<li id=""><span> <img src="" />
+			</span><span class="pairsName"></span><span class="price"></span> <span class="base"></span> <span class="baseVul price"></span> <span class="quot"></span> <span class="quotVul price"></span></li>
+		</ul>
+
+		<ul id="t1"></ul>
+		<div>
+			<a class="#" href="javascript:;" onclick="getNextData()" rel="#" id="autopbn">下一页 »</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+    var appendHteml = '';
+    var start = 1;
+     var num;
+    $(document).ready(function() {
+        getData();
+    });
+    function getData() {
+        var url = 'cc/currencyApiController.do?marketInfoExchange&base=1&quot=825&page=' + start + '';
+        console.log(url);
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            dataType: "text",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                xx(data);
+            }});
+    }
+
+    function xx(data) {
+        var htmlAppend = $('#template').html();
+        var markets = '';
+        $('#template').remove();
+        var t1 = $('#t1');
+        if(data!=""){var jsonObj = JSON.parse(data);}// 转换为json对象
+        else{alert("访问超时了！")}
+        //console.info(jsonObj.exchangeList.marketPair);
+        var t1 = $('#t1');
+        var li;
+        var count = 0;
+        start=jsonObj.start;
+        num=jsonObj.num_market_pairs;
+        console.log(start);
+		$.each(jsonObj.exchangeList, function(i, n) {
+			t1.append(htmlAppend.replace('id=\"\"', 'id=\"'+ n.exchange.exchangeid + '\"'));
+			li = $('#' + n.exchange.exchangeid);
+			li.find(' img').attr('src','images/currency/coin/64/' + n.exchange.exchangeid+ '.png');
+			li.find(' .pairsName').text(n.exchange.name);
+			li.find(' .price').text(format(n.priceDouble) + ' BTC');
+			li.find(' .base').text(n.marketPairBaseSymbol);
+			li.find(' .baseVul').text(format(n.quoteVolume24hBase) + ' BTC');
+			li.find(' .quot').text(n.marketPairQuoteSymbol);
+			li.find(' .quotVul').text(format(n.quoteVolume24hQuote) + ' BTC');
+			markets += '<a href=\"javascript:void(0);\">' + n.exchange.name+ ';</a>';
+			count += format(n.BTCVolume24h);
+			console.log(n.exchange.name);
+		});
+		$('h2').append(markets);
+		$('h3').text('24h总交易量' + count + '（BTC）');
+	}
+
+	/**
+	 * 如果大于0,保留两位小数，否则保留4位小数
+	 */
+	function format(value) {
+		return value;
+		/*
+		var parts = (value + '').split('.');
+		var intpart = parts[0];
+		var floatpart = parts[1];
+		if (parseInt(intpart) > 1) {
+		    intpart = intpart.replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&,');
+		    floatpart = floatpart.substring(0, 2);
+		} else {
+		    intpart = 0;
+		    floatpart = floatpart.substring(0, 4);
+		}
+		return result = intpart + '.' + floatpart;
+		 */
+	}
+	
+	
+	
+	function getNextData() {
+		if (start == num) {
+			alert("下面没有数据了,做人要有底线!");
+			return false;
+		} else {
+			getData();
+		}
+	}
+</script>
+</html>

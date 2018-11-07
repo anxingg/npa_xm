@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.min.js"></script>
+<title>ccapi测试</title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+* {
+	padding: auto;
+	margin: auto;
+}
+
+#asset {
+	width: 1000px;
+	padding: 20px; /*下面代码是兼容各个浏览器的，并实现了四列，没两列之间间距为30px，*/
+	-moz-column-count: 4;
+	-moz-column-gap: 30px;
+	-moz-column-rule: 0px solid #ff0000;
+	-webkit-column-count: 4;
+	-webkit-column-gap: 30px;
+	-webkit-column-rule: 0px solid #ff0000;
+	-o-column-count: 4;
+	-o-column-gap: 30px;
+	-o-column-rule: 0px solid #ff0000;
+}
+
+#asset .card {
+	width: 200px;
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid #d0cfe1;
+	cursor: hand;
+	text-align: center;
+	background-color: #edebda;
+}
+
+#asset a {
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+}
+
+#asset a:hover .card{
+	background-color: rgba(120, 40, 40, 0.9);
+}
+
+.card .pri-name {
+	margin-top: .5em;
+	color: #280000;
+	font-size: .9em;
+	font-weight: 600;
+	letter-spacing: .02em;
+}
+
+.card .pri-code {
+	margin-bottom: .1em;
+	font-size: 1.6em;
+	font-weight: 600;
+	letter-spacing: .05em;
+	font-weight: 600;
+	color: #f05a4b;
+}
+
+.card .volume {
+	margin-top: -.4em;
+	margin-bottom: .8em;
+	color: #f05a4b;
+	font-size: 1.4em;
+	font-weight: 600;
+	color: #f05a4b;
+	font-size: 1.4em;
+}
+
+.card .volume-desc, .card .src-desc {
+	display: inline-block;
+	margin-bottom: .5em;
+	padding: 0 .5em;
+	border-radius: .4em;
+	font-size: .75em;
+	font-weight: 600;
+	color: #a06464;
+	background-color: rgba(120, 0, 0, .025);
+}
+
+.card .src-code-list {
+	margin-bottom: .4em;
+	font-size: .8em;
+	letter-spacing: .015em;
+	width: 180px;
+	min-height: 50px;
+	word-wrap: break-word;
+}
+
+.card .rank {
+	
+}
+</style>
+</head>
+<body>
+	<div id="asset" id="template">
+		<a href="javascript:void(0)" id="">
+			<div class="card">
+				<div class="pri-name"></div>
+				<div class="pri-code"></div>
+				<div class="volume-desc">24 hours Trade Volume</div>
+				<div class="volume">
+					30556.33
+					<p>BTC</p>
+				</div>
+				<div class="src-desc">Avalable Exchanges</div>
+				<div class="src-code-list"></div>
+				<div class="rank"></div>
+			</div>
+		</a>
+	</div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var url = 'http://100.64.79.45:8080/caweb/cc/currencyApiController.do?assetsGeneral';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            dataType: "text",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                xx(data);
+            }});
+    });
+
+    function xx(data) {
+        var htmlAppend = $('#asset').html();
+        var asset = $('#asset');
+        console.info(htmlAppend);
+        var jsonObj = JSON.parse(data);// 转换为json对象
+        $.each(jsonObj, function(i, n) {
+            var item = asset.append(htmlAppend.replace('id=\"\"', 'id=\"' + n.asset_id + '\"'));
+            $('#' + n.asset_id + ' .pri-name').text(n.name);
+            $('#' + n.asset_id + ' .pri-code').text(n.asset_id);
+            $('#' + n.asset_id + ' .src-code-list').text(n.avalableExchanges);
+        });
+    }
+</script>
+</html>

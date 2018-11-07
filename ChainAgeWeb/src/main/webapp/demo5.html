@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="plug-in/echart/echarts.js"></script>
+<title>BTC监视器</title>
+<style type="text/css">
+* {
+	margin: auto;
+	padding: auto;
+}
+
+body {
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#ticker, #line, #ohlcv, #market {
+	width: 95%;
+	margin-top: 5px;
+}
+
+#ticker {
+	border: 1px solid #0D56A6;
+	background-color: #F97070;
+	display: none;
+}
+
+#line {
+	border: 1px solid #4186D3;
+	height: 300px;
+}
+
+#ohlcv {
+	border: 1px solid #274F7D;
+	height: 300px;
+}
+
+#market {
+	font-size: 12px;
+}
+
+#market a {
+	display: block;
+	float: left;
+	width: calc(100%/ 7 - 4em);
+	margin: .1em .1em;
+	padding: .4em;
+	border: 1px solid #242424;
+}
+
+#market a .code {
+	display: block;
+	float: left;
+	width: 5em;
+	font-weight: 600;
+	color: #5f5f5f;
+}
+
+#market a .price {
+	display: inline-block;
+	width: calc(100% - 5.5em);
+	text-align: right;
+	color: #f52b00;
+}
+
+#market a .aud::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .brl::after {
+	content: 'R$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .gbp::after {
+	content: '£';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .cad::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .clp::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .cny::after {
+	content: '¥';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .czk::after {
+	content: 'Kč';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .dkk::after {
+	content: 'kr';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .eur::after {
+	content: '€';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .hkd::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .huf::after {
+	content: 'Ft';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .inr::after {
+	content: '₹';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .idr::after {
+	content: 'Rp';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .ils::after {
+	content: '₪';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .jpy::after {
+	content: '¥';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .myr::after {
+	content: 'RM';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .mxn::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .twd::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .nzd::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .nok::after {
+	content: 'kr';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .pkr::after {
+	content: '₨';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .php::after {
+	content: '₱';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .pln::after {
+	content: 'zł';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .rub::after {
+	content: '₽';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .sgd::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .zar::after {
+	content: 'R';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .krw::after {
+	content: '₩';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .sek::after {
+	content: 'kr';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .chf::after {
+	content: 'Fr';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .thb::after {
+	content: '฿';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .try::after {
+	content: '₺';
+	color: #000;
+	font-weight: 200;
+}
+
+#market a .usd::after {
+	content: '$';
+	color: #000;
+	font-weight: 200;
+}
+</style>
+</head>
+<body>
+	<div id="ticker"></div>
+	<div id="line"></div>
+	<div id="ohlcv"></div>
+	<div id="market">
+		<a data-key="BTC/AED" href="javascript:void(0)" id="">
+			<div class="code">
+				<span>BTC/AUD</span>
+			</div>
+			<div class="price">
+				<span class="n-integer n-number">23,703</span>
+			</div>
+		</a>
+	</div>
+</body>
+<script type="text/javascript">
+    //给数组增加自定义函数
+    function cacl(arr, callback) {
+        var ret;
+        for (var i = 0; i < arr.length; i++) {
+            ret = callback(arr[i], ret);
+        }
+        return ret;
+    }
+
+    Array.prototype.max = function() {
+        return cacl(this, function(item, max) {
+            if (!(max > item)) {
+                return item;
+            } else {
+                return max;
+            }
+        });
+    };
+    Array.prototype.min = function() {
+        return cacl(this, function(item, min) {
+            if (!(min < item)) {
+                return item;
+            } else {
+                return min;
+            }
+        });
+    };
+    Array.prototype.sum = function() {
+        return cacl(this, function(item, sum) {
+            if (typeof (sum) == 'undefined') {
+                return item;
+            } else {
+                return sum += item;
+            }
+        });
+    };
+    Array.prototype.avg = function() {
+        if (this.length == 0) { return 0; }
+        return this.sum(this) / this.length;
+    };
+
+    //正文开始
+    var myChart_line = echarts.init(document.getElementById('line'));
+    var myChart_ohlcv = echarts.init(document.getElementById('ohlcv'));
+    $(document).ready(function() {
+        init();
+        getData2();
+    });
+
+    var u = ['aud', 'brl', 'gbp', 'cad', 'clp', 'cny', 'czk', 'dkk', 'eur', 'hkd', 'huf', 'inr', 'idr', 'ils', 'jpy', 'myr', 'mxn', 'twd', 'nzd', 'nok', 'pkr', 'php', 'pln',
+            'rub', 'sgd', 'zar', 'krw', 'sek', 'chf', 'thb', 'try', 'usd'];
+
+    function init() {
+        var market = $('#market');
+        var htmlAppend = market.html();
+        market.find('a').remove();
+
+        $.each(u, function(i, n) {
+            market.append(htmlAppend.replace('id=\"\"', 'id=\"' + n + '\"'));
+            $('#' + n + ' .code span').text('BTC/' + n);
+            $('#' + n + ' .price').addClass(n).addClass('sign');
+        });
+    }
+
+    function getData1() {
+        var url = 'cc/currencyApiController.do?btcMonitorRate';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            dataType: "text",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                getRateData(data);
+            }});
+    }
+
+    function getData2() {
+        var url = 'cc/currencyApiController.do?btcMonitorLineOHLCV';
+        $.ajax({
+            type: 'GET',
+            url: url,
+            async: true,
+            dataType: "text",
+            error: function() {
+                alert("请求有误");
+            },
+            success: function(data) {
+                getLineOhlcvData(data);
+            }});
+    }
+
+    function createLine(name, result) {
+        var line = new Object;
+        line.values = []; //y轴数据点
+        line.categoryData = []; //x轴数据点
+        line.otherData = new Array(new Array(), new Array(), new Array(), new Array());
+        $.each(result.line_his_queue, function(i, n) {
+            line.otherData[0].push(parseFloat(n.priceUsd.toFixed(2)));
+            line.otherData[1].push(parseFloat(n.priceJpy.toFixed(2)));
+            line.otherData[2].push(parseFloat(n.priceEur.toFixed(2)));
+            line.otherData[3].push(parseFloat(n.priceCny.toFixed(2)));
+            line.categoryData.push(n.lastUpdated.replace('2018-', ''));
+        });
+
+        line.name = name;
+        var max = line.otherData[0].max();
+        var min = line.otherData[0].min();
+        line.max = parseInt(max + max / 100);
+        line.min = parseInt(min - min / 100);
+
+        $.each(line.otherData[0], function(i, n) {
+            line.values.push(n);
+        });
+
+        return line;
+    }
+
+    function createOhlcv(name, result) {
+        var ohlcv = new Object;
+        ohlcv.temp1 = [];
+        $.each(result.ohlcv_his_queue, function(i, n) {
+            var arr = [];
+            arr.push(n.lastUpdated.replace('2018-', ''));
+            arr.push(n.open);
+            arr.push(n.close);
+            arr.push(n.low);
+            arr.push(n.high);
+            ohlcv.temp1.push(arr);
+        });
+
+        ohlcv.data = splitData(ohlcv.temp1);
+        return ohlcv;
+    }
+
+    function getLineOhlcvData(data) {
+        var jsonObj = JSON.parse(data);// 转换为json对象
+        var ohlcv_his_queue = jsonObj.ohlcv_his_queue;
+
+        var line = createLine('test', jsonObj);
+        var ohlcv = createOhlcv('test', jsonObj);
+        myChart_line.setOption({
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'},
+                formatter: function(params, ticket, callback) {
+                    var dix = params[0].dataIndex;
+                    var res = '<div style="color:#fff">' + params[0].name + ' UTC</div>'
+                                    + '<ul style="margin:0 0 0 15px;padding:0"><li style="color:#8585e4;"><span style="width:50px;padding-right:10px;">BTC/USD</span><span>'
+                                    + params[0].value + '</span></li><li style="color:#b46496;"><span style="width:50px;padding-right:10px;">BTC/JPY</span><span>'
+                                    + line.otherData[1][dix] + '</span></li><li style="color:#d2c88c;"><span style="width:50px;padding-right:10px;">BTC/EUR</span><span>'
+                                    + line.otherData[2][dix] + '</span></li><li style="color:#dc8282;"><span style="width:50px;padding-right:10px;">BTC/CNY</span><span>'
+                                    + line.otherData[3][dix] + '</span></li><ul>';
+                    return res;
+                }},
+            xAxis: {
+                type: 'category',
+                boundaryGap: true,
+                data: line.categoryData},
+            yAxis: {
+                type: 'value',
+                min: line.min,
+                max: line.max,
+                axisLabel: {
+                    formatter: '{value} USD'}},
+            series: [{
+                name: '1',
+                type: 'line',
+                data: line.values}]});
+
+        myChart_ohlcv.setOption({
+            title: {},
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'}},
+            xAxis: {
+                type: 'category',
+                scale: true,
+                boundaryGap: false,
+                data: ohlcv.data.categoryData,
+                axisLine: {
+                    onZero: false},
+                splitLine: {
+                    show: false},
+                splitNumber: 20,
+                min: 'dataMin',
+                max: 'dataMax'},
+            yAxis: {
+                scale: true,
+                splitArea: {
+                    show: true},
+                axisLabel: {
+                    formatter: '{value} USD'}},
+            dataZoom: [{
+                type: 'inside',
+                start: 70,
+                end: 100}, {
+                show: true,
+                type: 'slider',
+                y: '90%',
+                start: 50,
+                end: 100}],
+            series: [{
+                name: '日K',
+                type: 'candlestick',
+                data: ohlcv.data.values,
+                itemStyle: {
+                    normal: {
+                        color: upColor,
+                        color0: downColor,
+                        borderColor: upBorderColor,
+                        borderColor0: downBorderColor}},
+                markPoint: {
+                    label: {
+                        normal: {
+                            formatter: function(param) {
+                                return param != null ? Math.round(param.value) : '';
+                            }}},
+                    data: [{
+                        name: 'highest value',
+                        type: 'max',
+                        valueDim: 'highest'}, {
+                        name: 'lowest value',
+                        type: 'min',
+                        valueDim: 'lowest'}, {
+                        name: 'average value on close',
+                        type: 'average',
+                        valueDim: 'close'}]},
+                markLine: {
+                    symbol: ['none', 'none'],
+                    data: [[{
+                        name: 'from lowest to highest',
+                        type: 'min',
+                        valueDim: 'lowest',
+                        symbol: 'circle',
+                        symbolSize: 10,
+                        label: {
+                            normal: {
+                                show: false},
+                            emphasis: {
+                                show: false}}}, {
+                        type: 'max',
+                        valueDim: 'highest',
+                        symbol: 'circle',
+                        symbolSize: 10,
+                        label: {
+                            normal: {
+                                show: false},
+                            emphasis: {
+                                show: false}}}], {
+                        name: 'min line on close',
+                        type: 'min',
+                        valueDim: 'close'}, {
+                        name: 'max line on close',
+                        type: 'max',
+                        valueDim: 'close'}]}}]
+
+        });
+    }
+
+    function getRateData(data) {
+        var jsonObj = JSON.parse(data);// 转换为json对象
+        for (name in jsonObj) {
+            var index = name.indexOf('price');
+            if (index === 0) {
+                var key = name.substr(5).toLowerCase();
+                var item = $('#' + key + ' .price span').text(format(jsonObj[name]));
+            }
+            //console.info(name + ":" + jsonObj[name] + " " + typeof jsonObj[name]);
+        }
+    }
+
+    var upColor = '#00da3c';
+    var upBorderColor = '#008F28';
+    var downColor = '#ec0000';
+    var downBorderColor = '#8A0000';
+
+    // 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
+    function splitData(rawData) {
+        var categoryData = [];
+        var values = []
+        for (var i = 0; i < rawData.length; i++) {
+            categoryData.push(rawData[i].splice(0, 1)[0]);
+            values.push(rawData[i])
+        }
+        return {
+            categoryData: categoryData,
+            values: values};
+    }
+
+    /**
+     * 如果大于0,保留两位小数，否则保留4位小数
+     */
+    function format(value) {
+        var parts = (value + '').split('.');
+        var intpart = parts[0];
+        var floatpart = parts[1];
+        if (parseInt(intpart) > 1) {
+            intpart = intpart.replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&,');
+            floatpart = floatpart.substring(0, 2);
+        } else {
+            intpart = 0;
+            floatpart = floatpart.substring(0, 4);
+        }
+        return result = intpart + '.' + floatpart;
+    }
+
+    var ccc = 0;
+    /*
+    var ii = self.setInterval("test()",300);
+    function test(){
+        if(ccc >= 32){
+            window.clearInterval(ii);
+            ccc = 0;
+        }
+        else{
+            $('#' + u[ccc]).fadeIn('slow');
+        }
+        ccc++;
+    }  
+     */
+</script>
+</html>
